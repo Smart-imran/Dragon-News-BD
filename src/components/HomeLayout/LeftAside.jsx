@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import Categories from '../Categories';
 
 const LeftAside = () => {
     return (
         <div>
-            <h2>LeftAside</h2>
+            <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+                 <Categories></Categories>
+            </Suspense>
+           
         </div>
     );
 };
